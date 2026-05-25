@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-bg: #f4fafd;
+  --color-brand-dim: #d4dbdd;
+  --color-brand-bright: #f4fafd;
+  --color-brand-primary: #004349;
+  --color-brand-primary-container: #0d5c63;
+  --color-brand-on-primary-container: #90d2da;
+  --color-brand-secondary: #436555;
+  --color-brand-secondary-container: #c2e8d3;
+  --color-brand-on-secondary-container: #476a59;
+  --color-brand-surface-low: #eef5f7;
+  --color-brand-surface: #e8eff1;
+  --color-brand-surface-high: #e2e9ec;
+  --color-brand-surface-highest: #dde4e6;
+  --color-brand-on-surface: #161d1f;
+  --color-brand-on-surface-variant: #3f484a;
+  --color-brand-error: #ba1a1a;
+  --color-brand-error-container: #ffdad6;
+  --color-brand-on-error-container: #93000a;
+}
+
+/* Custom layout and utilities */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.bento-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px -5px rgba(13, 92, 99, 0.08);
+}
