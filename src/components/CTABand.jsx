@@ -24,7 +24,7 @@ export default function CTABand({ onTabChange }) {
 
 	return (
 		<section className="py-16 bg-[#f7f9f7]">
-			<div className="max-w-[1240px] mx-auto px-6">
+			<div className=" mx-auto px-6">
 				<div
 					ref={ref}
 					className="bg-[#1a4731] rounded-[40px] p-8 md:p-14 text-center relative overflow-hidden shadow-xl"

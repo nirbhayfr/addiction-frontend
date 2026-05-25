@@ -1,5 +1,90 @@
 import { useRef, useState } from "react";
 
+function BeforeAfterSlider({ before, after }) {
+	const [position, setPosition] = useState(50);
+	const containerRef = useRef(null);
+	const dragging = useRef(false);
+
+	const updatePosition = (clientX) => {
+		const rect = containerRef.current.getBoundingClientRect();
+		const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+		setPosition((x / rect.width) * 100);
+	};
+
+	const onMouseDown = () => {
+		dragging.current = true;
+	};
+	const onMouseMove = (e) => {
+		if (dragging.current) updatePosition(e.clientX);
+	};
+	const onMouseUp = () => {
+		dragging.current = false;
+	};
+	const onTouchMove = (e) => updatePosition(e.touches[0].clientX);
+
+	return (
+		<div
+			ref={containerRef}
+			className="relative w-full aspect-square overflow-hidden rounded-sm select-none cursor-col-resize"
+			onMouseDown={onMouseDown}
+			onMouseMove={onMouseMove}
+			onMouseUp={onMouseUp}
+			onMouseLeave={onMouseUp}
+			onTouchMove={onTouchMove}
+		>
+			{/* AFTER (bottom layer) */}
+			<img
+				src={after}
+				alt="after"
+				className="absolute inset-0 w-full h-full object-cover"
+			/>
+
+			{/* BEFORE (clipped top layer) */}
+			<div
+				className="absolute inset-0 overflow-hidden"
+				style={{ width: `${position}%` }}
+			>
+				<img
+					src={before}
+					alt="before"
+					className="absolute inset-0 w-full h-full object-cover"
+				/>
+			</div>
+
+			{/* DIVIDER */}
+			<div
+				className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg"
+				style={{ left: `${position}%` }}
+			>
+				<div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 20 20"
+						fill="none"
+					>
+						<path
+							d="M7 5l-4 5 4 5M13 5l4 5-4 5"
+							stroke="#004349"
+							strokeWidth="2"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						/>
+					</svg>
+				</div>
+			</div>
+
+			{/* LABELS */}
+			<span className="absolute top-3 left-3 bg-black/50 text-white text-[10px] font-black px-2 py-1 rounded-full">
+				BEFORE
+			</span>
+			<span className="absolute top-3 right-3 bg-emerald-600 text-white text-[10px] font-black px-2 py-1 rounded-full">
+				AFTER
+			</span>
+		</div>
+	);
+}
+
 export default function ProductShowcase() {
 	const headerRef = useRef(null);
 	const leftRef = useRef(null);
@@ -7,6 +92,8 @@ export default function ProductShowcase() {
 	const cardsRef = useRef([]);
 
 	const [calculatorResults, setCalculatorResults] = useState(null);
+	const images = ["/product.jpeg", "/product-2.png"];
+	const [current, setCurrent] = useState(0);
 
 	const generateTimeline = () => {
 		setCalculatorResults({
@@ -42,7 +129,7 @@ export default function ProductShowcase() {
 
 	return (
 		<section className="relative overflow-hidden py-12 md:py-16 bg-white">
-			<div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+			<div className=" mx-auto px-4 sm:px-6">
 				{/* HEADER */}
 				<div
 					ref={headerRef}
@@ -64,17 +151,45 @@ export default function ProductShowcase() {
 
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 					{/* LEFT */}
+
 					<div
 						ref={leftRef}
-						className="lg:col-span-6 flex flex-col items-center"
+						className="lg:col-span-6 flex flex-col items-center gap-4"
 					>
-						<img
-							src="/product.jpeg"
-							alt="product"
-							className="rounded-sm"
-						/>
+						<div className="relative w-full aspect-square overflow-hidden rounded-sm">
+							<img
+								src={images[current]}
+								alt="product"
+								className="absolute inset-0 w-full h-full object-cover"
+							/>
+							<button
+								onClick={() =>
+									setCurrent(
+										(prev) =>
+											(prev -
+												1 +
+												images.length) %
+											images.length,
+									)
+								}
+								className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center shadow"
+							>
+								‹
+							</button>
+							<button
+								onClick={() =>
+									setCurrent(
+										(prev) =>
+											(prev + 1) %
+											images.length,
+									)
+								}
+								className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/80 flex items-center justify-center shadow"
+							>
+								›
+							</button>
+						</div>
 					</div>
-
 					{/* RIGHT */}
 					<div ref={rightRef} className="lg:col-span-6">
 						<h3 className="text-2xl font-black text-[#004349] mb-6">

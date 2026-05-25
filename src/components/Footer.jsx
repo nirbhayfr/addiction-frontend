@@ -58,7 +58,7 @@ export default function Footer() {
 	return (
 		<footer
 			ref={footerRef}
-			className="relative overflow-hidden bg-brand-surface dark:bg-slate-950 border-t border-brand-dim/20"
+			className="relative overflow-hidden bg-white border-t border-green-700 [&_*]:text-green-700 [&_*]:border-green-200"
 		>
 			<div className="absolute inset-0 pointer-events-none overflow-hidden">
 				<div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-brand-primary/10 blur-3xl rounded-full" />

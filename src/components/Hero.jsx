@@ -63,7 +63,7 @@ export default function Hero({ onTabChange }) {
 				<div className="absolute inset-0 bg-gradient-to-r from-[#f7f9f7] via-[#f7f9f7]/85 to-transparent" />
 			</div>
 
-			<div className="max-w-[1240px] mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+			<div className=" mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 				{/* Left */}
 				<div className="lg:col-span-7 space-y-6 text-left">
 					<div
@@ -89,10 +89,10 @@ export default function Hero({ onTabChange }) {
 						ref={descRef}
 						className="text-sm md:text-base text-[#5a7a63] max-w-xl leading-relaxed"
 					>
-						“जब नशे की आदत गहरी हो जाती है, तो जीवन के हर
+						{/* “जब नशे की आदत गहरी हो जाती है, तो जीवन के हर
 						हिस्से पर असर पड़ता है। सही मार्गदर्शन, नियमित
 						दिनचर्या और सहयोग के साथ Addiction Mukti आपकी
-						बेहतर रिकवरी की ओर कदम बढ़ाने में मदद करता है।”
+						बेहतर रिकवरी की ओर कदम बढ़ाने में मदद करता है।” */}
 						<span className="block mt-2 font-sans font-medium italic text-[#4a7c59]">
 							पुनर्प्राप्ति संभव है। हम नैदानिक विश्वास और
 							जैविक देखभाल प्रदान करते हैं।
@@ -181,7 +181,7 @@ export default function Hero({ onTabChange }) {
 										<p className="font-sans font-extrabold text-xs text-[#1a4731]">
 											{title}
 										</p>
-										<p className="text-xs text-[#5a7a63] leading-relaxed mt-1">
+										<p className="text-[#5a7a63] leading-relaxed mt-1">
 											{desc}
 										</p>
 									</div>

@@ -153,7 +153,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 				<Leaf className="w-full h-full text-[#4a7c59] -rotate-45" />
 			</div>
 
-			<div className="max-w-[1240px] mx-auto px-6 w-full relative z-10">
+			<div className=" mx-auto px-6 w-full relative z-10">
 				<div className="text-center mb-12 space-y-2">
 					<span className="text-xs uppercase font-extrabold text-[#436555] bg-emerald-100 px-3.5 py-1 rounded-full">
 						आयुर्वेदिक विषहरण शक्ति
@@ -218,24 +218,6 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									</div>
 								))}
 							</div>
-
-							{/* <div className="pt-4 flex flex-col sm:flex-row gap-4 items-center border-t border-slate-100">
-								<button
-									onClick={() =>
-										handleOpenCheckout(
-											"recommended",
-										)
-									}
-									className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-sans font-extrabold text-sm rounded-2xl shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center gap-2 active:scale-95"
-								>
-									<ShoppingCart className="w-4 h-4" />
-									अभी Order करें ! (Order Now)
-								</button>
-								 <div className="text-left">
-                  <span className="block text-2xl font-black text-[#004349]">₹2,999/-</span>
-                  <span className="block text-[10px] text-slate-400 font-sans uppercase font-bold tracking-wider">3-Month Program • Free COD Delivery</span>
-                </div> 
-							</div> */}
 						</div>
 
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 mt-8 border-t border-slate-100 pt-6">
@@ -263,7 +245,12 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 					{/* RIGHT */}
 					<div
 						ref={rightRef}
-						className="lg:col-span-5 bg-gradient-to-br from-emerald-100/45 to-[#f4fafd] rounded-[40px] border border-[#d4dbdd]/40 p-6 md:p-8 shadow-xl flex flex-col justify-between text-left relative overflow-hidden"
+						className="lg:col-span-5 rounded-[40px] border border-[#d4dbdd]/40 p-6 md:p-8 shadow-xl flex flex-col justify-between text-left relative overflow-hidden"
+						style={{
+							backgroundImage: "url('/doctor.png')",
+							backgroundSize: "cover",
+							backgroundPosition: "center",
+						}}
 					>
 						<div className="absolute top-0 right-0 p-4 pointer-events-none opacity-20">
 							<Sprout className="w-20 h-20 text-[#436555]" />
@@ -278,56 +265,12 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									एक सही कदम, और नशे से हमेशा की
 									आज़ादी !
 								</h3>
-								<p className="text-xs text-slate-600 font-sans leading-relaxed mt-1">
+								<p className="text-xs text-white font-sans leading-relaxed mt-1">
 									प्राकृतिक जड़ी-बूटियों और सही
 									मार्गदर्शन के साथ नशामुक्त जीवन की
 									नई शुरुआत।
 								</p>
 							</div>
-
-							{/* <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-4 border border-slate-200/50 space-y-3 shadow-sm">
-								<div className="flex gap-3 items-center">
-									<div className="relative">
-										<div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 flex items-center justify-center font-sans font-black text-white text-xl shadow">
-											Dr
-										</div>
-										<span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse" />
-									</div>
-									<div className="text-left">
-										<span className="block font-sans font-extrabold text-sm text-slate-900">
-											Dr. Manish G. (B.A.M.S)
-											<span className="ml-1.5 px-1.5 py-0.5 bg-emerald-100 text-emerald-800 text-[8px] font-bold rounded align-middle">
-												Active Advisory
-											</span>
-										</span>
-										<span className="block text-[10px] text-slate-500">
-											Senior Ayurvedic
-											De-addiction Consultant
-										</span>
-										<span className="block text-[9px] text-amber-600 font-bold">
-											★ 4.9 Rating (14,200+
-											Recovered Families)
-										</span>
-									</div>
-								</div>
-								<div className="space-y-2 border-t border-slate-100 pt-3">
-									<div className="p-2 rounded-xl bg-emerald-50/50 text-[10px] leading-relaxed text-slate-700 italic border-l-2 border-[#436555]">
-										"Navjeev drops stabilize your
-										nervous system during detox,
-										relieving cold chills,
-										anxiety, & heavy cravings
-										instantly"
-									</div>
-									<button
-										onClick={onFocusForm}
-										className="w-full py-2 bg-gradient-to-r from-[#004349] to-[#0d5c63] text-white hover:opacity-95 font-sans font-extrabold text-[10px] rounded-xl flex items-center justify-center gap-2 transition-all"
-									>
-										<Phone className="w-3.5 h-3.5 text-emerald-300" />
-										Instant Call With Advisor |
-										निशुल्क परामर्श लें
-									</button>
-								</div>
-							</div> */}
 						</div>
 
 						<div className="grid grid-cols-2 gap-3.5 mt-8 pt-4 border-t border-slate-200/40">

@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
 			ref={sectionRef}
 			className="py-20 bg-[#f0f5f1] border-y border-emerald-100"
 		>
-			<div className="max-w-[1240px] mx-auto px-6 w-full">
+			<div className=" mx-auto px-6 w-full">
 				<div className="text-center mb-16 space-y-3">
 					<span className="text-xs uppercase tracking-widest font-extrabold text-[#4a7c59] bg-[#d4ead9] px-3.5 py-1 rounded-full">
 						नैदानिक उत्कृष्टता एवं मार्गदर्शित देखभाल
@@ -76,11 +76,11 @@ export default function WhyChooseUs() {
 								प्रक्रिया पर आधारित है, जिससे व्यक्ति को
 								संतुलित और स्वस्थ जीवन की ओर बढ़ने में
 								सहायता मिलती है।
-								<span className="block font-sans font-medium italic text-[#4a7c59] mt-2">
+								{/* <span className="block font-sans font-medium italic text-[#4a7c59] mt-2">
 									अनुभवी विशेषज्ञों की देखरेख में
 									सुरक्षित और व्यवस्थित सहायता प्रदान
 									की जाती है।
-								</span>
+								</span> */}
 							</p>
 						</div>
 						<div className="w-full md:w-48 h-36 rounded-2xl overflow-hidden shrink-0">
@@ -116,9 +116,9 @@ export default function WhyChooseUs() {
 							शुरू होती है।
 						</p>
 
-						<div className="mt-4 text-[10px] uppercase font-sans tracking-widest font-bold text-white/50">
+						{/* <div className="mt-4 text-[10px] uppercase font-sans tracking-widest font-bold text-white/50">
 							सुरक्षित एवं गोपनीय रिकॉर्ड प्रणाली
-						</div>
+						</div> */}
 					</div>
 
 					{/* Family Support */}
@@ -143,10 +143,10 @@ export default function WhyChooseUs() {
 								भावनात्मक सहयोग और व्यवस्थित परामर्श के
 								माध्यम से फिर से जोड़ने में सहायता करते
 								हैं।
-								<span className="block font-sans font-medium text-[11px] mt-1 italic">
+								{/* <span className="block font-sans font-medium text-[11px] mt-1 italic">
 									व्यक्ति के साथ पूरे परिवार को
 									संतुलन की ओर ले जाना।
-								</span>
+								</span> */}
 							</p>
 						</div>
 						<div className="mt-6 flex -space-x-2">
@@ -186,11 +186,11 @@ export default function WhyChooseUs() {
 								मानसिक तनाव, बेचैनी और नशे से बाहर आने
 								की प्रक्रिया के दौरान स्थिरता एवं
 								सकारात्मक ऊर्जा प्रदान करता है।
-								<span className="block font-sans font-medium italic text-[#4a7c59] mt-2">
+								{/* <span className="block font-sans font-medium italic text-[#4a7c59] mt-2">
 									मन, शरीर और जीवनशैली को संतुलित
 									करने के लिए विशेष रूप से तैयार
 									वातावरण।
-								</span>
+								</span> */}
 							</p>
 						</div>
 						<div className="w-full md:w-52 h-36 rounded-2xl overflow-hidden shrink-0">

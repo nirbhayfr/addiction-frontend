@@ -34,7 +34,8 @@ export default function Navbar({ currentTab, onTabChange }) {
 				</div>
 				<div>
 					<span className="font-sans font-extrabold text-xl text-[#1a4731] tracking-tight leading-none">
-						Addiction Mukti
+						Addiction{" "}
+						<span className="text-[#9D151F]">Mukti</span>
 					</span>
 					<span className="block text-[9px] uppercase tracking-widest font-extrabold text-[#4a7c59]">
 						तत्काल मानसिक स्वास्थ्य सहायता

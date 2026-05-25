@@ -147,9 +147,9 @@ This request was submitted through the website.
 		<section
 			id="admission-section"
 			ref={sectionRef}
-			className="py-20 bg-white"
+			className="py-20 bg-white [overflow-x:clip]"
 		>
-			<div className="max-w-[1240px] mx-auto px-6 w-full">
+			<div className=" mx-auto px-6 w-full">
 				<div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 					{/* Left */}
 					<div
