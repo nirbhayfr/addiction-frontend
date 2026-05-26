@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 import ProductShowcase from "../components/ProductShowcase";
 import SuccessTimelines from "../components/SuccessTimelines";
+import TestimonialsSection from "../components/Testimonials";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 function Homepage() {
@@ -18,6 +19,7 @@ function Homepage() {
 			<AddictionMuktiCampaign />
 			<Admission />
 			<SuccessTimelines />
+			<TestimonialsSection />
 			<CTABand />
 			<Footer />
 		</main>

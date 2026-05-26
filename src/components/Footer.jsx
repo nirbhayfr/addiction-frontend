@@ -76,9 +76,9 @@ export default function Footer() {
 							<div>
 								<h2
 									ref={headingRef}
-									className="text-3xl font-black tracking-wide text-brand-primary dark:text-white"
+									className="text-2xl font-black tracking-wide text-brand-primary dark:text-white"
 								>
-									ADDICTION MUKTI
+									NAVJEEV Restore Drops
 								</h2>
 
 								<p className="text-xs uppercase text-brand-secondary font-bold mt-1">

@@ -15,6 +15,7 @@ export default function Admission({ formRef }) {
 	const [urgency, setUrgency] = useState("Immediate / Emergency");
 	const [request, setRequest] = useState(null);
 	const [queueState, setQueueState] = useState(0);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	useEffect(() => {
 		const tl = gsap.timeline({
@@ -60,6 +61,8 @@ export default function Admission({ formRef }) {
 
 		if (!fullName.trim() || !phoneNumber.trim()) return;
 
+		setIsSubmitting(true);
+
 		const requestData = {
 			fullName,
 			phoneNumber,
@@ -68,20 +71,29 @@ export default function Admission({ formRef }) {
 			status: "connecting",
 		};
 
-		await fetch("https://addiction-backend.onrender.com/api/requests", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				fullName,
-				phoneNumber,
-				urgency,
-				message: "Callback request",
-				type: "callback",
-			}),
-		});
+		try {
+			await fetch(
+				"https://addiction-backend.onrender.com/api/requests",
+				{
+					// await fetch("http://localhost:5000/api/requests", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						fullName,
+						phoneNumber,
+						urgency,
+						message: "Callback request",
+						type: "callback",
+					}),
+				},
+			);
+		} catch (_) {
+			// continue even if fetch fails
+		}
 
+		setIsSubmitting(false);
 		setRequest(requestData);
 		setQueueState(1);
 
@@ -194,9 +206,6 @@ This request was submitted through the website.
 										<h4 className="font-sans font-extrabold text-lg text-[#1a4731]">
 											{s.titleHn}
 										</h4>
-										{/* <p className="text-xs font-semibold text-[#4a7c59] italic mt-1">
-											{s.titleHn}
-										</p> */}
 										<p className="text-sm text-[#5a7a63] leading-relaxed mt-1.5">
 											{s.desc}
 										</p>
@@ -313,10 +322,42 @@ This request was submitted through the website.
 										</div>
 										<button
 											type="submit"
-											className="w-full py-4 bg-[#1a4731] hover:bg-[#2d6b4f] text-white rounded-xl font-sans font-extrabold text-sm hover:shadow-lg transition-all active:scale-[0.98] shadow-md shadow-[#1a4731]/20 flex items-center justify-center gap-2"
+											disabled={isSubmitting}
+											className="w-full py-4 bg-[#1a4731] hover:bg-[#2d6b4f] disabled:opacity-75 disabled:cursor-not-allowed text-white rounded-xl font-sans font-extrabold text-sm hover:shadow-lg transition-all active:scale-[0.98] shadow-md shadow-[#1a4731]/20 flex items-center justify-center gap-2"
 										>
-											Submit Request | अनुरोध
-											भेजें
+											{isSubmitting ? (
+												<>
+													<svg
+														className="w-4 h-4 animate-spin text-white/80"
+														xmlns="http://www.w3.org/2000/svg"
+														fill="none"
+														viewBox="0 0 24 24"
+													>
+														<circle
+															className="opacity-25"
+															cx="12"
+															cy="12"
+															r="10"
+															stroke="currentColor"
+															strokeWidth="4"
+														/>
+														<path
+															className="opacity-75"
+															fill="currentColor"
+															d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+														/>
+													</svg>
+													<span>
+														भेजा जा
+														रहा है…
+													</span>
+												</>
+											) : (
+												<>
+													Submit Request
+													| अनुरोध भेजें
+												</>
+											)}
 										</button>
 										<p className="text-[9px] text-center text-[#8aaa91] uppercase tracking-widest font-extrabold">
 											🔒 केवल विशेषज्ञ परामर्श

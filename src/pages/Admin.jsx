@@ -26,6 +26,7 @@ export default function AdminRequests() {
 			setLoading(true);
 
 			const res = await fetch(
+				// "http://localhost:5000/api/requests",
 				"https://addiction-backend.onrender.com/api/requests",
 			);
 

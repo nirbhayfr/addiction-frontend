@@ -29,13 +29,15 @@ export default function Navbar({ currentTab, onTabChange }) {
 				className="flex items-center gap-3 cursor-pointer"
 				onClick={() => onTabChange("home")}
 			>
-				<div className="w-10 h-10 rounded-full bg-[#1a4731] flex items-center justify-center text-white font-extrabold text-base select-none shadow-md shadow-[#1a4731]/20">
+				{/* <div className="w-10 h-10 rounded-full bg-[#1a4731] flex items-center justify-center text-white font-extrabold text-base select-none shadow-md shadow-[#1a4731]/20">
 					A
-				</div>
+				</div> */}
 				<div>
 					<span className="font-sans font-extrabold text-xl text-[#1a4731] tracking-tight leading-none">
-						Addiction{" "}
-						<span className="text-[#9D151F]">Mukti</span>
+						Navjeev{" "}
+						<span className="text-[#9D8542]">
+							Restore Drops
+						</span>
 					</span>
 					<span className="block text-[9px] uppercase tracking-widest font-extrabold text-[#4a7c59]">
 						तत्काल मानसिक स्वास्थ्य सहायता
