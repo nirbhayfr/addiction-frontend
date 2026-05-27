@@ -158,7 +158,8 @@ export default function Footer() {
 					className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
 				>
 					<p className="text-xs font-bold text-brand-secondary">
-						© 2026 Addiction Mukti. सर्व अधिकार सुरक्षित।
+						© 2026 Navjeev Restore Drops. सर्व अधिकार
+						सुरक्षित।
 					</p>
 
 					<p className="text-xs text-brand-on-surface-variant dark:text-slate-500">

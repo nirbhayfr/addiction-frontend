@@ -89,10 +89,6 @@ export default function Hero({ onTabChange }) {
 						ref={descRef}
 						className="text-sm md:text-base text-[#5a7a63] max-w-xl leading-relaxed"
 					>
-						{/* “जब नशे की आदत गहरी हो जाती है, तो जीवन के हर
-						हिस्से पर असर पड़ता है। सही मार्गदर्शन, नियमित
-						दिनचर्या और सहयोग के साथ Addiction Mukti आपकी
-						बेहतर रिकवरी की ओर कदम बढ़ाने में मदद करता है।” */}
 						<span className="block mt-2 font-sans font-medium italic text-[#4a7c59]">
 							पुनर्प्राप्ति संभव है। हम नैदानिक विश्वास और
 							जैविक देखभाल प्रदान करते हैं।

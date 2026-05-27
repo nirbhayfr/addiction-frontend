@@ -179,7 +179,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									आज ही शुरुआत करें और नशों को कहें
 									अलविदा–{" "}
 									<span className="text-[#436555] relative">
-										Addiction Mukti
+										Navjeev Restore Drops
 										<span className="absolute bottom-1 left-0 w-full h-2 bg-emerald-200/50 -z-10" />
 									</span>
 								</h1>
