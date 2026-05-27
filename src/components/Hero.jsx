@@ -51,7 +51,7 @@ export default function Hero({ onTabChange }) {
 	return (
 		<section
 			ref={heroRef}
-			className="relative min-h-[600px] flex items-center overflow-hidden py-8 bg-[#f7f9f7]"
+			className="relative min-h-[600px] flex items-center overflow-hidden pb-8 bg-[#f7f9f7]"
 		>
 			<div className="absolute inset-0 -z-10">
 				<img

@@ -103,17 +103,39 @@ export default function Footer() {
 						</p>
 
 						<div className="flex items-center gap-4 mt-8">
-							{["A", "I", "Y"].map((label, index) => (
+							{[
+								{
+									icon: "/facebook.png",
+									alt: "Facebook",
+									link: "https://facebook.com",
+								},
+								{
+									icon: "/instagram.png",
+									alt: "Instagram",
+									link: "https://instagram.com",
+								},
+								{
+									icon: "/linkedin.png",
+									alt: "LinkedIn",
+									link: "https://linkedin.com",
+								},
+							].map((social, index) => (
 								<a
 									key={index}
 									ref={(el) =>
 										(socialRef.current[index] =
 											el)
 									}
-									href="#"
-									className="w-11 h-11 rounded-xl border border-brand-primary/20 bg-white dark:bg-slate-900 flex items-center justify-center text-brand-primary font-bold"
+									href={social.link}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="w-11 h-11 rounded-xl border border-brand-primary/20 bg-white dark:bg-slate-900 flex items-center justify-center hover:scale-105 transition-all"
 								>
-									{label}
+									<img
+										src={social.icon}
+										alt={social.alt}
+										className="w-5 h-5 object-contain"
+									/>
 								</a>
 							))}
 						</div>
@@ -147,7 +169,7 @@ export default function Footer() {
 								className="flex items-center gap-3 text-brand-on-surface-variant dark:text-slate-400"
 							>
 								<Mail className="w-5 h-5 text-brand-primary" />
-								help@addictionmukti.org
+								help@navjeev.in
 							</a>
 						</div>
 					</div>

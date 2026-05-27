@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { PhoneCall, Radio } from "lucide-react";
+import { PhoneCall, Radio, ShieldCheck } from "lucide-react";
 import gsap from "gsap";
 
 export default function Navbar({ currentTab, onTabChange }) {
@@ -29,19 +29,25 @@ export default function Navbar({ currentTab, onTabChange }) {
 				className="flex items-center gap-3 cursor-pointer"
 				onClick={() => onTabChange("home")}
 			>
-				{/* <div className="w-10 h-10 rounded-full bg-[#1a4731] flex items-center justify-center text-white font-extrabold text-base select-none shadow-md shadow-[#1a4731]/20">
-					A
-				</div> */}
-				<div>
+				<div className="flex flex-col gap-1">
 					<span className="font-sans font-extrabold text-xl text-[#1a4731] tracking-tight leading-none">
 						Navjeev{" "}
 						<span className="text-[#9D8542]">
 							Restore Drops
 						</span>
 					</span>
-					<span className="block text-[9px] uppercase tracking-widest font-extrabold text-[#4a7c59]">
-						तत्काल मानसिक स्वास्थ्य सहायता
-					</span>
+
+					<div className="flex items-center gap-1.5">
+						<span className="w-1 h-1 rounded-full bg-[#9D8542] shrink-0" />
+						<span className="font-sans text-[10px] font-bold uppercase tracking-[0.08em] text-[#4a7c59]">
+							<span className="text-[#9C1420]">
+								1,00,000+
+							</span>{" "}
+							families trust us
+						</span>
+						<span className="w-1 h-1 rounded-full bg-[#9D8542] shrink-0" />
+						<ShieldCheck className="w-2.5 h-2.5 text-[#9D8542]" />
+					</div>
 				</div>
 			</div>
 
