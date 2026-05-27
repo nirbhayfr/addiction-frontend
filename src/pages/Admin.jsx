@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ADMIN_CODE = "1234"; // change this to your secret code
 
@@ -26,7 +26,6 @@ export default function AdminRequests() {
 			setLoading(true);
 
 			const res = await fetch(
-				// "http://localhost:5000/api/requests",
 				"https://addiction-backend.onrender.com/api/requests",
 			);
 
@@ -39,6 +38,57 @@ export default function AdminRequests() {
 		} finally {
 			setLoading(false);
 		}
+	};
+
+	// ---------------- CSV EXPORT ----------------
+
+	const exportCSV = () => {
+		if (!data.length) return;
+
+		const headers = [
+			"Name",
+			"Phone",
+			"Urgency",
+			"Message",
+			"Type",
+			"Date",
+		];
+
+		const rows = data.map((item) => [
+			item.fullName || "",
+			item.phoneNumber || "",
+			item.urgency || "",
+			item.message || "",
+			item.type || "",
+			new Date(item.createdAt).toLocaleString("en-IN"),
+		]);
+
+		const csvContent = [
+			headers.join(","),
+			...rows.map((row) =>
+				row
+					.map(
+						(field) =>
+							`"${String(field).replace(/"/g, '""')}"`,
+					)
+					.join(","),
+			),
+		].join("\n");
+
+		// UTF-8 BOM for Hindi support in Excel
+		const blob = new Blob(["\uFEFF" + csvContent], {
+			type: "text/csv;charset=utf-8;",
+		});
+
+		const url = URL.createObjectURL(blob);
+
+		const link = document.createElement("a");
+		link.href = url;
+		link.download = `requests-${Date.now()}.csv`;
+
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
 	};
 
 	// ---------------- UI ----------------
@@ -88,9 +138,18 @@ export default function AdminRequests() {
 
 	return (
 		<div className="p-6 md:p-10 bg-slate-50 min-h-screen">
-			<h1 className="text-2xl font-black text-slate-800 mb-6">
-				Admin Panel - Requests
-			</h1>
+			<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+				<h1 className="text-2xl font-black text-slate-800">
+					Admin Panel - Requests
+				</h1>
+
+				<button
+					onClick={exportCSV}
+					className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-bold transition"
+				>
+					Export CSV
+				</button>
+			</div>
 
 			<div className="overflow-x-auto bg-white rounded-xl shadow border">
 				<table className="w-full text-sm">
@@ -114,14 +173,19 @@ export default function AdminRequests() {
 								<td className="p-3 font-semibold">
 									{item.fullName || "-"}
 								</td>
+
 								<td className="p-3">
 									{item.phoneNumber}
 								</td>
+
 								<td className="p-3">{item.urgency}</td>
+
 								<td className="p-3 max-w-[300px] truncate">
 									{item.message || "-"}
 								</td>
+
 								<td className="p-3">{item.type}</td>
+
 								<td className="p-3 text-xs text-slate-500">
 									{new Date(
 										item.createdAt,
