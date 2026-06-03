@@ -50,7 +50,7 @@ export default function CTABand({ onTabChange }) {
 
 						<div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
 							<a
-								href="tel:8700428833"
+								href="tel:7982217125"
 								className="w-full sm:w-auto px-8 py-3.5 bg-white text-[#1a4731] hover:bg-slate-50 rounded-full font-sans font-extrabold text-sm inline-flex items-center justify-center gap-2 active:scale-95 transition-all shadow-md"
 							>
 								<Phone className="w-4 h-4 fill-[#1a4731]" />
@@ -62,7 +62,7 @@ export default function CTABand({ onTabChange }) {
 							</span>
 
 							<a
-								href={`https://api.whatsapp.com/send?phone=8700428833&text=मुझे अपॉइंटमेंट बुक करना है`}
+								href={`https://api.whatsapp.com/send?phone=7982217125&text=मुझे अपॉइंटमेंट बुक करना है`}
 								onClick={() => onTabChange("crisis")}
 								className="w-full sm:w-auto px-8 py-3.5 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 rounded-full font-sans font-extrabold text-sm inline-flex items-center justify-center gap-2 transition-all"
 							>

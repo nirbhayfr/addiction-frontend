@@ -79,11 +79,11 @@ export default function Navbar({ currentTab, onTabChange }) {
 			</nav> */}
 
 			<a
-				href="tel:8700428833"
+				href="tel:7982217125"
 				className="hidden lg:flex items-center gap-2 px-4 py-2 bg-[#1a4731] text-white rounded-full font-sans font-extrabold text-xs hover:bg-[#2d6b4f] transition-all shadow-md shadow-[#1a4731]/20"
 			>
 				<PhoneCall className="w-4 h-4 fill-white animate-bounce" />
-				<span>+91 8700428833</span>
+				<span>+91 7982217125</span>
 			</a>
 		</header>
 	);

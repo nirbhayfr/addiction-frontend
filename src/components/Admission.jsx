@@ -120,7 +120,7 @@ ${requestData.submittedAt}
 This request was submitted through the website.
 `.trim();
 
-		const whatsappNumber = "918700428833";
+		const whatsappNumber = "917982217125";
 
 		const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 

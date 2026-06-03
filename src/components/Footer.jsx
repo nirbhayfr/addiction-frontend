@@ -161,7 +161,7 @@ export default function Footer() {
 								className="flex items-center gap-3 text-brand-on-surface-variant dark:text-slate-400"
 							>
 								<Phone className="w-5 h-5 text-brand-primary" />
-								+91 8700428833
+								+91 7982217125
 							</a>
 
 							<a

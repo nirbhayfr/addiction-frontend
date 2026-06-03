@@ -100,7 +100,7 @@ export default function Hero({ onTabChange }) {
 						className="flex flex-wrap gap-4 pt-4"
 					>
 						<a
-							href="tel:8700428833"
+							href="tel:7982217125"
 							onClick={() => onTabChange("crisis")}
 							className="px-8 py-3.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white rounded-full font-sans font-extrabold text-xs md:text-sm hover:shadow-lg transition-all flex items-center gap-2.5 active:scale-95 shadow-md shadow-[#1a4731]/20"
 						>
@@ -142,10 +142,10 @@ export default function Hero({ onTabChange }) {
 									24×7 सहायता उपलब्ध • Safe Dial
 								</p>
 								<a
-									href="tel:8700428833"
+									href="tel:7982217125"
 									className="text-xl md:text-2xl font-sans font-extrabold tracking-tight mt-0.5 font-mono"
 								>
-									8700428833
+									7982217125
 								</a>
 							</div>
 							<div className="p-3 bg-white/10 rounded-full group-hover:scale-110 transition-transform">

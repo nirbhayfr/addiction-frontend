@@ -80,7 +80,7 @@ Quantity:
 		`.trim();
 
 			window.open(
-				`https://wa.me/918700428833?text=${encodeURIComponent(
+				`https://wa.me/917982217125?text=${encodeURIComponent(
 					whatsappMessage,
 				)}`,
 				"_blank",
