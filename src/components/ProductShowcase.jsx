@@ -93,7 +93,12 @@ export default function ProductShowcase() {
 	const cardsRef = useRef([]);
 
 	const [calculatorResults, setCalculatorResults] = useState(null);
-	const images = ["/product-2.jpeg", "/product.jpeg"];
+	const images = [
+		"/product.jpeg",
+		"/product-2.jpeg",
+		"/product-3.jpeg",
+		"/product-4.jpeg",
+	];
 	const [current, setCurrent] = useState(0);
 	const [openPopup, setOpenPopup] = useState(false);
 
@@ -163,11 +168,11 @@ export default function ProductShowcase() {
 						ref={leftRef}
 						className="lg:col-span-6 flex flex-col items-center gap-4"
 					>
-						<div className="relative w-full aspect-square overflow-hidden rounded-sm">
+						<div className="relative w-full h-[450px] md:h-[600px] lg:h-[750px] overflow-hidden rounded-sm">
 							<img
 								src={images[current]}
 								alt="product"
-								className="absolute inset-0 w-full h-full object-cover"
+								className="absolute inset-0 w-full h-full object-contain"
 							/>
 							<button
 								onClick={() =>
