@@ -93,7 +93,7 @@ export default function ProductShowcase() {
 	const cardsRef = useRef([]);
 
 	const [calculatorResults, setCalculatorResults] = useState(null);
-	const images = ["/product.jpeg", "/product-2.png"];
+	const images = ["/product.jpeg", "/product-2.jpeg"];
 	const [current, setCurrent] = useState(0);
 	const [openPopup, setOpenPopup] = useState(false);
 
