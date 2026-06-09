@@ -1,6 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 
-const banners = ["/banner-1.jpeg", "/banner-2.jpeg"];
+const banners = [
+	"/banner-1.jpeg",
+	"/banner-2.jpeg",
+	"/banner-3.png",
+	"/banner-4.png",
+];
 
 export default function BannerSlider() {
 	const [current, setCurrent] = useState(0);
