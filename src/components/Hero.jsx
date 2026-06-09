@@ -90,8 +90,8 @@ export default function Hero({ onTabChange }) {
 						className="text-sm md:text-base text-[#5a7a63] max-w-xl leading-relaxed"
 					>
 						<span className="block mt-2 font-sans font-medium italic text-[#4a7c59]">
-							पुनर्प्राप्ति संभव है। हम नैदानिक विश्वास और
-							जैविक देखभाल प्रदान करते हैं।
+							नशे से बाहर निकलना संभव है। हम हर कदम पर आपका
+							साथ देते हैं।
 						</span>
 					</p>
 
@@ -157,13 +157,13 @@ export default function Hero({ onTabChange }) {
 							{[
 								{
 									Icon: HeartHandshake,
-									title: "सहानुभूतिपूर्ण परामर्श",
-									desc: "पूर्ण गोपनीयता के साथ हमारे विशेषज्ञों से बात करें।",
+									title: "समझ और सहयोग",
+									desc: "अपनी बात खुलकर कहें। हमारे विशेषज्ञ आपकी मदद के लिए हमेशा तैयार हैं।",
 								},
 								{
 									Icon: Users,
-									title: "चिकित्सीय सहायता",
-									desc: "नशा मुक्ति के लिए तुरंत चिकित्सीय और मानसिक सहायता।",
+									title: "विशेषज्ञों की सहायता",
+									desc: "नशा मुक्ति की यात्रा में अनुभवी विशेषज्ञ हर कदम पर आपका साथ देते हैं।",
 								},
 							].map(({ Icon, title, desc }) => (
 								<div

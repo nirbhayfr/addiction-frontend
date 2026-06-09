@@ -131,13 +131,21 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 		checkoutPayment === "upi" ? Math.round(pack.price * 0.9) : pack.price;
 
 	const features = [
-		{ Icon: Activity, title: "प्रारंभिक परामर्श", sub: "बेचैनी में मदद" },
+		{
+			Icon: Activity,
+			title: "प्रारंभिक परामर्श",
+			sub: "पहला कदम",
+		},
 		{
 			Icon: CalendarRange,
 			title: "मूल्यांकन एवं मार्गदर्शन",
-			sub: "आसान पालन",
+			sub: "सही दिशा",
 		},
-		{ Icon: Heart, title: "उपचार एवं पुनर्वास", sub: "घर में खुशहाली" },
+		{
+			Icon: Heart,
+			title: "उपचार एवं पुनर्वास",
+			sub: "नई शुरुआत",
+		},
 	];
 
 	return (
@@ -156,10 +164,10 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 			<div className=" mx-auto px-6 w-full relative z-10">
 				<div className="text-center mb-12 space-y-2">
 					<span className="text-base uppercase font-extrabold text-[#436555] bg-emerald-100 px-3.5 py-1 rounded-full">
-						आयुर्वेदिक विषहरण शक्ति
+						विश्वास, देखभाल और सहयोग
 					</span>
 					<h2 className="font-sans font-extrabold text-2xl md:text-4xl text-[#004349] pt-4">
-						व्यसन मुक्ति अभियान
+						नशा छोड़ें, नई ज़िंदगी अपनाएं
 					</h2>
 				</div>
 
