@@ -206,7 +206,7 @@ export default function ProgramsList() {
 									<h4 className="font-sans font-extrabold text-sm text-[#1a4731] leading-tight">
 										{p.nameEn}
 									</h4>
-									<p className="text-xs text-[#4a7c59] font-semibold mt-1">
+									<p className="text-base text-[#4a7c59] font-semibold mt-1">
 										{p.nameHn}
 									</p>
 									<div className="flex gap-3 mt-2 text-[10px] text-[#5a7a63] font-medium uppercase tracking-wider">
@@ -221,7 +221,7 @@ export default function ProgramsList() {
 
 					<div className="lg:col-span-7 bg-[#f0f5f1] border border-[#c8d8cc] rounded-[32px] p-6 md:p-8 flex flex-col justify-between">
 						<div className="text-left">
-							<span className="inline-block px-3 py-1 bg-[#d4ead9] text-[#4a7c59] font-sans text-xs font-bold rounded-full mb-3">
+							<span className="inline-block px-3 py-1 bg-[#d4ead9] text-[#4a7c59] font-sans text-base font-bold rounded-full mb-3">
 								{selected.focus}
 							</span>
 							<h3 className="font-sans font-extrabold text-2xl text-[#1a4731] leading-snug">
@@ -237,7 +237,7 @@ export default function ProgramsList() {
 									{selected.descriptionHn}
 								</span>
 							</p>
-							<h4 className="font-sans font-extrabold text-xs text-[#1a4731] uppercase tracking-widest mb-4">
+							<h4 className="font-sans font-extrabold text-base text-[#1a4731] uppercase tracking-widest mb-4">
 								Milestones ({selected.duration})
 							</h4>
 							<div className="space-y-3">
@@ -246,10 +246,10 @@ export default function ProgramsList() {
 										key={i}
 										className="flex gap-3 items-start"
 									>
-										<div className="w-5 h-5 rounded-full bg-[#1a4731] text-white flex items-center justify-center flex-shrink-0 text-xs font-bold mt-0.5">
+										<div className="w-5 h-5 rounded-full bg-[#1a4731] text-white flex items-center justify-center flex-shrink-0 text-base font-bold mt-0.5">
 											{i + 1}
 										</div>
-										<span className="text-xs text-[#5a7a63] font-medium leading-relaxed">
+										<span className="text-base text-[#5a7a63] font-medium leading-relaxed">
 											{s}
 										</span>
 									</div>
@@ -259,7 +259,7 @@ export default function ProgramsList() {
 						<div className="mt-8 pt-6 border-t border-[#c8d8cc] flex flex-col sm:flex-row items-center justify-between gap-4">
 							<div className="flex gap-2 items-center">
 								<div className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping" />
-								<span className="text-xs text-[#5a7a63] font-bold">
+								<span className="text-base text-[#5a7a63] font-bold">
 									Active Intake Open
 								</span>
 							</div>
@@ -274,7 +274,7 @@ export default function ProgramsList() {
 											behavior: "smooth",
 										});
 								}}
-								className="px-6 py-2.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white text-xs font-sans font-bold rounded-full shadow-sm flex items-center gap-2 transition-all active:scale-95"
+								className="px-6 py-2.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white text-base font-sans font-bold rounded-full shadow-sm flex items-center gap-2 transition-all active:scale-95"
 							>
 								Request Enrollment{" "}
 								<ChevronRight className="w-4 h-4" />
@@ -290,7 +290,7 @@ export default function ProgramsList() {
 					{!surveyResult ? (
 						<div className="space-y-6">
 							<div className="text-center">
-								<span className="text-xs font-sans font-extrabold text-[#4a7c59] bg-[#d4ead9]/50 px-3 py-1 rounded-full uppercase tracking-widest">
+								<span className="text-base font-sans font-extrabold text-[#4a7c59] bg-[#d4ead9]/50 px-3 py-1 rounded-full uppercase tracking-widest">
 									Step {surveyIndex + 1} of{" "}
 									{questions.length}
 								</span>
@@ -329,7 +329,7 @@ export default function ProgramsList() {
 									),
 								)}
 							</div>
-							<p className="text-center text-xs text-slate-400">
+							<p className="text-center text-base text-slate-400">
 								⚠️ Fully anonymous. Not a professional
 								clinical assessment.
 							</p>
@@ -366,7 +366,7 @@ export default function ProgramsList() {
 							<div className="flex gap-3 justify-center pt-4 flex-wrap">
 								<button
 									onClick={resetSurvey}
-									className="px-6 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-sans font-bold rounded-full transition-colors"
+									className="px-6 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 text-base font-sans font-bold rounded-full transition-colors"
 								>
 									Take Again
 								</button>
@@ -381,7 +381,7 @@ export default function ProgramsList() {
 												behavior: "smooth",
 											});
 									}}
-									className="px-6 py-2.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white text-xs font-sans font-bold rounded-full shadow-sm"
+									className="px-6 py-2.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white text-base font-sans font-bold rounded-full shadow-sm"
 								>
 									Request Consultation
 								</button>
@@ -403,7 +403,7 @@ export default function ProgramsList() {
 						</div>
 						{routineItems.map((item) => (
 							<div key={item.time} className="space-y-1.5">
-								<label className="block text-xs font-bold text-slate-600">
+								<label className="block text-base font-bold text-slate-600">
 									{item.time} — {item.label}
 								</label>
 								<select
@@ -411,7 +411,7 @@ export default function ProgramsList() {
 									onChange={(e) =>
 										item.set(e.target.value)
 									}
-									className="w-full bg-white border border-[#c8d8cc] rounded-xl p-3 text-xs font-medium text-[#1a4731] outline-none focus:ring-2 focus:ring-[#1a4731]"
+									className="w-full bg-white border border-[#c8d8cc] rounded-xl p-3 text-base font-medium text-[#1a4731] outline-none focus:ring-2 focus:ring-[#1a4731]"
 								>
 									{item.options.map((o) => (
 										<option key={o}>{o}</option>
@@ -432,7 +432,7 @@ export default function ProgramsList() {
 								</h4>
 							</div>
 							<div className="w-full h-[1px] bg-white/10" />
-							<div className="space-y-4 text-xs font-sans">
+							<div className="space-y-4 text-base font-sans">
 								{routineItems.map((item) => (
 									<div
 										key={item.time}
@@ -460,7 +460,7 @@ export default function ProgramsList() {
 										"Routine saved! Our consultant will help lock in dates.",
 									)
 								}
-								className="flex-1 bg-white hover:bg-slate-100 text-[#1a4731] p-3 rounded-xl font-sans font-bold text-xs flex items-center justify-center gap-2 active:scale-95 transition-all"
+								className="flex-1 bg-white hover:bg-slate-100 text-[#1a4731] p-3 rounded-xl font-sans font-bold text-base flex items-center justify-center gap-2 active:scale-95 transition-all"
 							>
 								<FileText className="w-4 h-4" /> Lock
 								Routine Calendar

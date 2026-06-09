@@ -14,8 +14,8 @@ function Homepage() {
 		<main className="font-serif bg-yellow-200 text-purple-700 uppercase font-bold">
 			<Navbar />
 			<ProductShowcase />
-			<Hero />
 			<WhyChooseUs />
+			<Hero />
 			<AddictionMuktiCampaign />
 			<Admission />
 			<SuccessTimelines />

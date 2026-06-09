@@ -92,7 +92,7 @@ export default function EmergencyHub() {
 						<h3 className="font-sans font-extrabold text-xl text-rose-950">
 							Crisis & De-escalation Hub
 						</h3>
-						<p className="text-xs text-rose-900 mt-1 max-w-xl leading-relaxed">
+						<p className="text-base text-rose-900 mt-1 max-w-xl leading-relaxed">
 							If someone is in acute distress or medical
 							withdrawal shock, remain calm. We provide
 							direct guidance, breathing stabilizers, and a
@@ -165,18 +165,18 @@ export default function EmergencyHub() {
 							>
 								<div className="flex gap-3 items-center">
 									<Icon className="w-5 h-5 text-[#1a4731]" />
-									<span className="text-xs font-bold text-[#1a4731]">
+									<span className="text-base font-bold text-[#1a4731]">
 										{label}
 									</span>
 								</div>
-								<span className="text-xs font-mono font-extrabold text-[#4a7c59] bg-white px-2 py-1 rounded">
+								<span className="text-base font-mono font-extrabold text-[#4a7c59] bg-white px-2 py-1 rounded">
 									{val}
 								</span>
 							</div>
 						))}
 					</div>
 					<div className="p-4 bg-slate-50 border border-slate-200 rounded-2xl">
-						<h5 className="font-sans font-bold text-xs text-[#1a4731] mb-2">
+						<h5 className="font-sans font-bold text-base text-[#1a4731] mb-2">
 							Biological Grounding Steps
 						</h5>
 						<p className="text-[11px] text-slate-500 leading-relaxed">
@@ -226,14 +226,14 @@ export default function EmergencyHub() {
 						</button>
 					</div>
 
-					<div className="flex-1 overflow-y-auto py-2 space-y-4 px-1 scrollbar-none text-xs">
+					<div className="flex-1 overflow-y-auto py-2 space-y-4 px-1 scrollbar-none text-base">
 						{messages.map((m) => (
 							<div
 								key={m.id}
 								className={`flex ${m.sender === "user" ? "justify-end" : "justify-start"}`}
 							>
 								<div
-									className={`p-4 rounded-3xl max-w-[85%] text-left text-xs leading-relaxed ${
+									className={`p-4 rounded-3xl max-w-[85%] text-left text-base leading-relaxed ${
 										m.sender === "user"
 											? "bg-[#1a4731] text-white rounded-tr-none"
 											: "bg-slate-100 text-[#1a4731] rounded-tl-none font-medium"
@@ -273,11 +273,11 @@ export default function EmergencyHub() {
 							value={input}
 							onChange={(e) => setInput(e.target.value)}
 							placeholder="Type your feelings (panic, craving, question)..."
-							className="flex-1 bg-slate-100 border-none rounded-xl px-4 py-3 text-xs font-semibold text-[#1a4731] focus:ring-2 focus:ring-[#1a4731] outline-none transition-all"
+							className="flex-1 bg-slate-100 border-none rounded-xl px-4 py-3 text-base font-semibold text-[#1a4731] focus:ring-2 focus:ring-[#1a4731] outline-none transition-all"
 						/>
 						<button
 							type="submit"
-							className="bg-[#1a4731] hover:bg-[#2d6b4f] text-white px-5 rounded-xl text-xs font-sans font-bold flex items-center gap-1.5 active:scale-95 transition-all"
+							className="bg-[#1a4731] hover:bg-[#2d6b4f] text-white px-5 rounded-xl text-base font-sans font-bold flex items-center gap-1.5 active:scale-95 transition-all"
 						>
 							<Send className="w-4 h-4" /> Send
 						</button>

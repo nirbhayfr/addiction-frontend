@@ -68,7 +68,7 @@ export default function Hero({ onTabChange }) {
 				<div className="lg:col-span-7 space-y-6 text-left">
 					<div
 						ref={badgeRef}
-						className="inline-flex items-center gap-2 px-4 py-1.5 bg-rose-50 text-rose-700 rounded-full font-sans text-xs font-bold shadow-sm border border-rose-200"
+						className="inline-flex items-center gap-2 px-4 py-1.5 bg-rose-50 text-rose-700 rounded-full font-sans text-base font-bold shadow-sm border border-rose-200"
 					>
 						<ShieldAlert className="w-4 h-4 animate-bounce" />
 						<span>तत्काल सहायता की आवश्यकता</span>
@@ -102,14 +102,14 @@ export default function Hero({ onTabChange }) {
 						<a
 							href="tel:7982217125"
 							onClick={() => onTabChange("crisis")}
-							className="px-8 py-3.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white rounded-full font-sans font-extrabold text-xs md:text-sm hover:shadow-lg transition-all flex items-center gap-2.5 active:scale-95 shadow-md shadow-[#1a4731]/20"
+							className="px-8 py-3.5 bg-[#1a4731] hover:bg-[#2d6b4f] text-white rounded-full font-sans font-extrabold text-base md:text-sm hover:shadow-lg transition-all flex items-center gap-2.5 active:scale-95 shadow-md shadow-[#1a4731]/20"
 						>
 							<Phone className="w-4 h-4" />
 							<span>तुरंत सहायता लें</span>
 						</a>
 						<button
 							onClick={onFocusForm}
-							className="px-8 py-3.5 border-2 border-[#4a7c59] text-[#4a7c59] hover:bg-[#4a7c59]/5 rounded-full font-sans font-extrabold text-xs md:text-sm transition-all active:scale-95"
+							className="px-8 py-3.5 border-2 border-[#4a7c59] text-[#4a7c59] hover:bg-[#4a7c59]/5 rounded-full font-sans font-extrabold text-base md:text-sm transition-all active:scale-95"
 						>
 							निःशुल्क परामर्श | Order Now
 						</button>
@@ -174,7 +174,7 @@ export default function Hero({ onTabChange }) {
 										<Icon className="w-5 h-5" />
 									</div>
 									<div>
-										<p className="font-sans font-extrabold text-xs text-[#1a4731]">
+										<p className="font-sans font-extrabold text-base text-[#1a4731]">
 											{title}
 										</p>
 										<p className="text-[#5a7a63] leading-relaxed mt-1">

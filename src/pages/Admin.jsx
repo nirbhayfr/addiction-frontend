@@ -155,7 +155,7 @@ export default function AdminOrders() {
 						<h1 className="text-xl font-extrabold text-slate-900 tracking-tight">
 							Admin Access
 						</h1>
-						<p className="text-xs text-slate-400">
+						<p className="text-base text-slate-400">
 							Enter your access code to continue
 						</p>
 					</div>
@@ -273,7 +273,7 @@ export default function AdminOrders() {
 						</svg>
 					</div>
 					<div>
-						<p className="text-xs text-slate-400 font-medium uppercase tracking-wide">
+						<p className="text-base text-slate-400 font-medium uppercase tracking-wide">
 							Total Orders
 						</p>
 						<p className="text-2xl font-extrabold text-slate-900">
@@ -300,7 +300,7 @@ export default function AdminOrders() {
 						</svg>
 					</div>
 					<div>
-						<p className="text-xs text-slate-400 font-medium uppercase tracking-wide">
+						<p className="text-base text-slate-400 font-medium uppercase tracking-wide">
 							Filtered
 						</p>
 						<p className="text-2xl font-extrabold text-slate-900">
@@ -311,7 +311,7 @@ export default function AdminOrders() {
 
 				{/* From date */}
 				<div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col gap-1">
-					<label className="text-xs text-slate-400 font-medium uppercase tracking-wide">
+					<label className="text-base text-slate-400 font-medium uppercase tracking-wide">
 						From Date
 					</label>
 					<input
@@ -324,7 +324,7 @@ export default function AdminOrders() {
 
 				{/* To date */}
 				<div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col gap-1">
-					<label className="text-xs text-slate-400 font-medium uppercase tracking-wide">
+					<label className="text-base text-slate-400 font-medium uppercase tracking-wide">
 						To Date
 					</label>
 					<input
@@ -341,7 +341,7 @@ export default function AdminOrders() {
 				<div className="mb-4">
 					<button
 						onClick={clearFilters}
-						className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 bg-white border border-slate-200 rounded-full px-3 py-1.5 transition-colors"
+						className="inline-flex items-center gap-1.5 text-base font-semibold text-slate-500 hover:text-slate-800 bg-white border border-slate-200 rounded-full px-3 py-1.5 transition-colors"
 					>
 						<svg
 							className="w-3.5 h-3.5"
@@ -367,25 +367,25 @@ export default function AdminOrders() {
 					<table className="w-full text-sm">
 						<thead>
 							<tr className="bg-slate-50 border-b border-slate-200">
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									#
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Name
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Phone
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Urgency
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Message
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Type
 								</th>
-								<th className="text-left px-4 py-3 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+								<th className="text-left px-4 py-3 text-base font-semibold text-slate-400 uppercase tracking-wider">
 									Date
 								</th>
 							</tr>
@@ -407,7 +407,7 @@ export default function AdminOrders() {
 										key={item._id}
 										className="border-t border-slate-100 hover:bg-slate-50 transition-colors"
 									>
-										<td className="px-4 py-3 text-xs text-slate-400 font-mono">
+										<td className="px-4 py-3 text-base text-slate-400 font-mono">
 											{(currentPage - 1) *
 												PAGE_SIZE +
 												idx +
@@ -416,12 +416,12 @@ export default function AdminOrders() {
 										<td className="px-4 py-3 font-semibold text-slate-800">
 											{item.fullName || "—"}
 										</td>
-										<td className="px-4 py-3 text-slate-600 font-mono text-xs">
+										<td className="px-4 py-3 text-slate-600 font-mono text-base">
 											{item.phoneNumber}
 										</td>
 										<td className="px-4 py-3">
 											<span
-												className={`inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full capitalize ${urgencyBadge(item.urgency)}`}
+												className={`inline-block text-base font-semibold px-2.5 py-0.5 rounded-full capitalize ${urgencyBadge(item.urgency)}`}
 											>
 												{item.urgency ||
 													"—"}
@@ -433,7 +433,7 @@ export default function AdminOrders() {
 										<td className="px-4 py-3 text-slate-600 capitalize">
 											{item.type || "—"}
 										</td>
-										<td className="px-4 py-3 text-xs text-slate-400">
+										<td className="px-4 py-3 text-base text-slate-400">
 											{new Date(
 												item.createdAt,
 											).toLocaleString(
@@ -450,7 +450,7 @@ export default function AdminOrders() {
 
 			{/* Pagination */}
 			<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-sm">
-				<p className="text-slate-400 text-xs">
+				<p className="text-slate-400 text-base">
 					Page{" "}
 					<span className="font-bold text-slate-700">
 						{currentPage}
@@ -519,7 +519,7 @@ export default function AdminOrders() {
 							p === "..." ? (
 								<span
 									key={`dots-${i}`}
-									className="w-8 h-8 flex items-center justify-center text-slate-400 text-xs"
+									className="w-8 h-8 flex items-center justify-center text-slate-400 text-base"
 								>
 									…
 								</span>
@@ -527,7 +527,7 @@ export default function AdminOrders() {
 								<button
 									key={p}
 									onClick={() => setPage(p)}
-									className={`w-8 h-8 flex items-center justify-center rounded-lg text-xs font-bold border transition-colors ${
+									className={`w-8 h-8 flex items-center justify-center rounded-lg text-base font-bold border transition-colors ${
 										currentPage === p
 											? "bg-slate-900 text-white border-slate-900"
 											: "border-slate-200 text-slate-600 hover:bg-slate-50"

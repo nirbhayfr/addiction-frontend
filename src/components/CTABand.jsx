@@ -57,7 +57,7 @@ export default function CTABand({ onTabChange }) {
 								<span>अभी निःशुल्क कॉल करें</span>
 							</a>
 
-							<span className="text-xs text-white/40 font-bold hidden sm:block">
+							<span className="text-base text-white/40 font-bold hidden sm:block">
 								या
 							</span>
 

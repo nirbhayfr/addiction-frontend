@@ -81,7 +81,7 @@ export default function Footer() {
 									NAVJEEV Restore Drops
 								</h2>
 
-								<p className="text-xs uppercase text-brand-secondary font-bold mt-1">
+								<p className="text-base uppercase text-brand-secondary font-bold mt-1">
 									नशा मुक्ति एवं कल्याण केंद्र
 								</p>
 							</div>
@@ -179,12 +179,12 @@ export default function Footer() {
 					ref={bottomRef}
 					className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
 				>
-					<p className="text-xs font-bold text-brand-secondary">
+					<p className="text-base font-bold text-brand-secondary">
 						© 2026 Navjeev Restore Drops. सर्व अधिकार
 						सुरक्षित।
 					</p>
 
-					<p className="text-xs text-brand-on-surface-variant dark:text-slate-500">
+					<p className="text-base text-brand-on-surface-variant dark:text-slate-500">
 						करुणा, देखभाल और पुनर्प्राप्ति के साथ जीवन का
 						पुनर्निर्माण।
 					</p>

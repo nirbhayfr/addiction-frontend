@@ -169,7 +169,7 @@ This request was submitted through the website.
 						className="lg:col-span-7 space-y-12 text-left"
 					>
 						<div>
-							<span className="text-xs uppercase tracking-widest font-extrabold text-[#4a7c59] bg-[#d4ead9] px-3 py-1 rounded">
+							<span className="text-base uppercase tracking-widest font-extrabold text-[#4a7c59] bg-[#d4ead9] px-3 py-1 rounded">
 								सरल प्रक्रिया
 							</span>
 
@@ -209,7 +209,7 @@ This request was submitted through the website.
 										<p className="text-sm text-[#5a7a63] leading-relaxed mt-1.5">
 											{s.desc}
 										</p>
-										<p className="text-xs text-[#4a7c59] italic mt-1">
+										<p className="text-base text-[#4a7c59] italic mt-1">
 											{s.descHn}
 										</p>
 									</div>
@@ -231,7 +231,7 @@ This request was submitted through the website.
 											आज ही कदम उठाएँ
 										</h3>
 
-										<p className="text-xs text-[#5a7a63] mt-1.5">
+										<p className="text-base text-[#5a7a63] mt-1.5">
 											हमारी टीम शीघ्र ही आपसे
 											संपर्क करेगी।
 										</p>
@@ -284,7 +284,7 @@ This request was submitted through the website.
 													placeholder={
 														f.placeholder
 													}
-													className="w-full bg-white border border-transparent rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#1a4731] text-xs font-semibold text-[#1a4731] focus:bg-white outline-none transition-all"
+													className="w-full bg-white border border-transparent rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#1a4731] text-base font-semibold text-[#1a4731] focus:bg-white outline-none transition-all"
 												/>
 											</div>
 										))}
@@ -301,7 +301,7 @@ This request was submitted through the website.
 															.value,
 													)
 												}
-												className="w-full bg-white border border-transparent rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#1a4731] text-xs font-semibold text-[#1a4731] outline-none transition-all"
+												className="w-full bg-white border border-transparent rounded-xl px-4 py-3.5 focus:ring-2 focus:ring-[#1a4731] text-base font-semibold text-[#1a4731] outline-none transition-all"
 											>
 												<option>
 													Immediate /
@@ -436,7 +436,7 @@ This request was submitted through the website.
 														)}
 													</div>
 													<div>
-														<span className="block text-xs font-bold text-[#1a4731]">
+														<span className="block text-base font-bold text-[#1a4731]">
 															{
 																item.label
 															}
@@ -479,7 +479,7 @@ This request was submitted through the website.
 									</div>
 									<button
 										onClick={handleReset}
-										className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-sans font-bold rounded-xl transition-all"
+										className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-base font-sans font-bold rounded-xl transition-all"
 									>
 										नया अनुरोध दर्ज करें
 									</button>

@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
 		>
 			<div className=" mx-auto px-6 w-full">
 				<div className="text-center mb-16 space-y-3">
-					<span className="text-xs uppercase tracking-widest font-extrabold text-[#4a7c59] bg-[#d4ead9] px-3.5 py-1 rounded-full">
+					<span className="text-base uppercase font-extrabold text-[#4a7c59] bg-[#d4ead9] px-3.5 py-1 rounded-full">
 						नैदानिक उत्कृष्टता एवं मार्गदर्शित देखभाल
 					</span>
 					<h2 className="font-sans font-extrabold text-3xl md:text-4xl text-[#1a4731] pt-4">
@@ -105,11 +105,11 @@ export default function WhyChooseUs() {
 							100% गोपनीय एवं सुरक्षित सहायता
 						</h3>
 
-						<p className="text-xs text-white/70 font-semibold mt-1">
+						<p className="text-base text-white/70 font-semibold mt-1">
 							पूर्णतः सुरक्षित एवं निजी परामर्श
 						</p>
 
-						<p className="text-xs text-white/75 leading-relaxed mt-3">
+						<p className="text-base text-white/75 leading-relaxed mt-3">
 							आपकी जानकारी और उपचार प्रक्रिया पूरी तरह
 							गोपनीय रखी जाती है। आपकी रिकवरी यात्रा
 							सम्मान, विश्वास और सुरक्षित मार्गदर्शन के साथ
@@ -134,11 +134,11 @@ export default function WhyChooseUs() {
 								पारिवारिक सहयोग एवं समर्थन
 							</h3>
 
-							<p className="font-sans font-bold text-xs text-[#4a7c59] mt-1">
+							<p className="font-sans font-bold text-base text-[#4a7c59] mt-1">
 								पारिवारिक सहयोग एवं मार्गदर्शन
 							</p>
 
-							<p className="text-xs text-[#1a4731]/80 leading-relaxed mt-2.5">
+							<p className="text-base text-[#1a4731]/80 leading-relaxed mt-2.5">
 								हम परिवारों को सकारात्मक संवाद,
 								भावनात्मक सहयोग और व्यवस्थित परामर्श के
 								माध्यम से फिर से जोड़ने में सहायता करते

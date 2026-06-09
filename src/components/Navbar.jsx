@@ -56,7 +56,7 @@ export default function Navbar({ currentTab, onTabChange }) {
 					<button
 						key={t.id}
 						onClick={() => onTabChange(t.id)}
-						className={`px-3 py-1.5 rounded-full font-sans font-bold text-xs transition-all duration-200 ${
+						className={`px-3 py-1.5 rounded-full font-sans font-bold text-base transition-all duration-200 ${
 							currentTab === t.id
 								? "bg-[#1a4731] text-white shadow-sm"
 								: "text-[#5a7a63] hover:text-[#1a4731] hover:bg-emerald-50"
@@ -67,7 +67,7 @@ export default function Navbar({ currentTab, onTabChange }) {
 				))}
 				<button
 					onClick={() => onTabChange("crisis")}
-					className={`px-3 py-1.5 rounded-full font-sans font-bold text-xs transition-all flex items-center gap-1.5 ${
+					className={`px-3 py-1.5 rounded-full font-sans font-bold text-base transition-all flex items-center gap-1.5 ${
 						currentTab === "crisis"
 							? "bg-rose-600 text-white shadow-sm"
 							: "bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200"
@@ -80,7 +80,7 @@ export default function Navbar({ currentTab, onTabChange }) {
 
 			<a
 				href="tel:7982217125"
-				className="hidden lg:flex items-center gap-2 px-4 py-2 bg-[#1a4731] text-white rounded-full font-sans font-extrabold text-xs hover:bg-[#2d6b4f] transition-all shadow-md shadow-[#1a4731]/20"
+				className="hidden lg:flex items-center gap-2 px-4 py-2 bg-[#1a4731] text-white rounded-full font-sans font-extrabold text-base hover:bg-[#2d6b4f] transition-all shadow-md shadow-[#1a4731]/20"
 			>
 				<PhoneCall className="w-4 h-4 fill-white animate-bounce" />
 				<span>+91 7982217125</span>

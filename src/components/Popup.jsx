@@ -125,7 +125,7 @@ Quantity:
 								{product.name}
 							</h2>
 
-							<p className="mt-2 text-xs sm:text-sm text-slate-600 leading-6 max-w-sm">
+							<p className="mt-2 text-base sm:text-sm text-slate-600 leading-6 max-w-sm">
 								{product.description}
 							</p>
 
@@ -134,7 +134,7 @@ Quantity:
 									₹{product.price}
 								</span>
 
-								<span className="text-xs sm:text-sm text-slate-400 line-through pb-1">
+								<span className="text-base sm:text-sm text-slate-400 line-through pb-1">
 									₹2999
 								</span>
 							</div>
@@ -158,7 +158,7 @@ Quantity:
 									प्रकार
 								</p>
 
-								<p className="mt-1 text-xs font-bold text-[#004349]">
+								<p className="mt-1 text-base font-bold text-[#004349]">
 									आयुर्वेदिक
 								</p>
 							</div>
@@ -168,7 +168,7 @@ Quantity:
 									सहायता
 								</p>
 
-								<p className="mt-1 text-xs font-bold text-[#004349]">
+								<p className="mt-1 text-base font-bold text-[#004349]">
 									24/7 उपलब्ध
 								</p>
 							</div>
@@ -187,7 +187,7 @@ Quantity:
 									अनुरोध सफलतापूर्वक भेजा गया
 								</h3>
 
-								<p className="mt-2 text-xs sm:text-sm text-slate-500 leading-7">
+								<p className="mt-2 text-base sm:text-sm text-slate-500 leading-7">
 									हमारी सहायता टीम शीघ्र ही आपसे
 									संपर्क करेगी।
 								</p>
@@ -259,7 +259,7 @@ Quantity:
 												</span>
 											</div>
 
-											<p className="mt-1 text-[11px] sm:text-xs text-slate-500 leading-5">
+											<p className="mt-1 text-[11px] sm:text-base text-slate-500 leading-5">
 												सीधे खरीद सहायता
 												अनुरोध
 											</p>

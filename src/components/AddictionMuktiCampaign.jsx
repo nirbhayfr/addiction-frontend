@@ -155,7 +155,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 
 			<div className=" mx-auto px-6 w-full relative z-10">
 				<div className="text-center mb-12 space-y-2">
-					<span className="text-xs uppercase font-extrabold text-[#436555] bg-emerald-100 px-3.5 py-1 rounded-full">
+					<span className="text-base uppercase font-extrabold text-[#436555] bg-emerald-100 px-3.5 py-1 rounded-full">
 						आयुर्वेदिक विषहरण शक्ति
 					</span>
 					<h2 className="font-sans font-extrabold text-2xl md:text-4xl text-[#004349] pt-4">
@@ -211,7 +211,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 											<p className="text-base font-extrabold text-slate-900">
 												{item.hi}
 											</p>
-											{/* <p className="text-xs text-slate-500">
+											{/* <p className="text-base text-slate-500">
 												{item.en}
 											</p> */}
 										</div>
@@ -258,14 +258,14 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 
 						<div className="space-y-4">
 							<div>
-								<span className="text-xs font-bold uppercase tracking-wider text-[#436555] block">
+								<span className="text-base font-bold uppercase tracking-wider text-[#436555] block">
 									🛡️ प्रमाणित विशेषज्ञों की देखरेख
 								</span>
 								<h3 className="font-sans font-extrabold text-xl text-[#004349] leading-snug mt-1">
 									एक सही कदम, और नशे से हमेशा की
 									आज़ादी !
 								</h3>
-								<p className="text-xs text-white font-sans leading-relaxed mt-1">
+								<p className="text-base text-white font-sans leading-relaxed mt-1">
 									प्राकृतिक जड़ी-बूटियों और सही
 									मार्गदर्शन के साथ नशामुक्त जीवन की
 									नई शुरुआत।
@@ -292,7 +292,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 										<Check className="w-3 h-3 stroke-[3]" />
 									</div>
 									<div className="text-left leading-tight">
-										<span className="block text-xs font-black text-slate-900">
+										<span className="block text-base font-black text-slate-900">
 											{item.hi}
 										</span>
 										<span className="text-[9px] text-slate-400 font-medium">
@@ -334,7 +334,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									<h3 className="text-xl font-bold text-[#004349] mt-1">
 										Complete Your Medicine Booking
 									</h3>
-									<p className="text-xs text-slate-500 font-sans mt-1">
+									<p className="text-base text-slate-500 font-sans mt-1">
 										All products ship in discreet
 										HIPAA-compliant health safety
 										boxes. Zero descriptive
@@ -389,14 +389,14 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 													</div>
 												)}
 												<div>
-													<span className="block text-xs font-extrabold">
+													<span className="block text-base font-extrabold">
 														{p.title}
 													</span>
 													<span className="block text-[10px] text-slate-500">
 														{p.desc}
 													</span>
 												</div>
-												<span className="text-xs font-black text-emerald-700 ml-3 shrink-0">
+												<span className="text-base font-black text-emerald-700 ml-3 shrink-0">
 													{p.price}
 												</span>
 											</button>
@@ -449,7 +449,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 													placeholder={
 														f.placeholder
 													}
-													className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-xs font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
+													className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-base font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
 												/>
 											</div>
 										))}
@@ -473,7 +473,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 													)
 												}
 												placeholder="House No, Road, City"
-												className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-xs font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
+												className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-base font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
 											/>
 										</div>
 										<div className="space-y-1">
@@ -494,7 +494,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 													)
 												}
 												placeholder="110001"
-												className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-xs font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
+												className="w-full bg-[#f4fafd] rounded-lg px-3 py-2 text-base font-semibold outline-none focus:ring-2 focus:ring-emerald-500 border border-transparent"
 											/>
 										</div>
 									</div>
@@ -529,7 +529,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 																id,
 															)
 														}
-														className={`p-2.5 rounded-lg border text-xs font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
+														className={`p-2.5 rounded-lg border text-base font-bold transition-all text-center flex items-center justify-center gap-1.5 ${
 															checkoutPayment ===
 															id
 																? "bg-[#004349] text-white border-transparent"
@@ -573,7 +573,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									<h3 className="text-2xl font-black text-[#004349]">
 										Order Placed Successfully!
 									</h3>
-									<p className="text-xs text-slate-500 max-w-sm mx-auto mt-2">
+									<p className="text-base text-slate-500 max-w-sm mx-auto mt-2">
 										Congratulations {checkoutName}
 										! Your priority de-addiction
 										system has been reserved under
@@ -617,7 +617,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 												{step.active && (
 													<span className="absolute -left-[22px] top-0.5 w-3 h-3 rounded-full bg-emerald-500" />
 												)}
-												<span className="block text-xs font-bold text-[#004349]">
+												<span className="block text-base font-bold text-[#004349]">
 													{step.title}
 												</span>
 												<span
@@ -630,7 +630,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 									</div>
 								</div>
 								<div className="p-4 bg-[#f4fafd] rounded-2xl border border-[#d4dbdd]/40 text-left flex gap-3.5 items-center">
-									<div className="w-10 h-10 rounded-full bg-[#004349] text-white flex items-center justify-center font-bold text-xs shrink-0">
+									<div className="w-10 h-10 rounded-full bg-[#004349] text-white flex items-center justify-center font-bold text-base shrink-0">
 										R
 									</div>
 									<div>
@@ -638,7 +638,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 											Your Appointed Support
 											Advisor
 										</span>
-										<span className="block text-xs font-black text-slate-900">
+										<span className="block text-base font-black text-slate-900">
 											Advisory Doctor Manish G.
 										</span>
 										<span className="block text-[9px] text-slate-500">
@@ -650,7 +650,7 @@ export default function AddictionMuktiCampaign({ onFocusForm }) {
 								</div>
 								<button
 									onClick={closeModal}
-									className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-sans font-bold rounded-xl transition-all"
+									className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-base font-sans font-bold rounded-xl transition-all"
 								>
 									Return to Homepage
 								</button>

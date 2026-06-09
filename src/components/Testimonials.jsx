@@ -65,7 +65,7 @@ export default function TestimonialsSection() {
 			<div className="max-w-7xl mx-auto px-4">
 				{/* Heading */}
 				<div className="testimonial-heading text-center max-w-3xl mx-auto mb-14">
-					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-5">
+					<div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-800 text-base font-bold mb-5">
 						<MessageCircle className="w-4 h-4" />
 						हमारे मरीजों के अनुभव
 					</div>
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
 												{item.name}
 											</h3>
 
-											<p className="text-xs text-slate-500">
+											<p className="text-base text-slate-500">
 												{item.age} वर्ष •{" "}
 												{item.location}
 											</p>
@@ -164,7 +164,7 @@ export default function TestimonialsSection() {
 													: item.id,
 											)
 										}
-										className="text-xs font-bold text-[#004349] hover:underline cursor-pointer"
+										className="text-base font-bold text-[#004349] hover:underline cursor-pointer"
 									>
 										{isExpanded
 											? "कम पढ़ें"
@@ -175,7 +175,7 @@ export default function TestimonialsSection() {
 										onClick={() =>
 											handleLike(item.id)
 										}
-										className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-bold transition-all ${
+										className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-base font-bold transition-all ${
 											liked[item.id]
 												? "bg-rose-50 text-rose-600 border-rose-200"
 												: "bg-slate-50 text-slate-600 border-slate-200"
