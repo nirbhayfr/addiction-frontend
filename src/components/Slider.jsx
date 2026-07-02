@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
 const banners = [
-	// "/banner-1.jpeg",
-	// "/banner-2.jpeg",
-	// "/banner-2.jpeg",
-	"/banner-3.png",
-	"/banner-4.png",
+	{
+		desktop: "/banner-3.png",
+		mobile: "/banner-1.jpeg",
+	},
+	{
+		desktop: "/banner-4.png",
+		mobile: "/banner-2.jpeg",
+	},
 ];
 
 export default function BannerSlider() {
@@ -62,17 +65,23 @@ export default function BannerSlider() {
 				className="flex h-full transition-transform duration-700 ease-in-out"
 				style={{ transform: `translateX(-${current * 100}%)` }}
 			>
-				{banners.map((src, i) => (
+				{banners.map((banner, i) => (
 					<div
 						key={i}
 						className="relative w-full h-full shrink-0"
 					>
-						<img
-							src={src}
-							alt={`Banner ${i + 1}`}
-							className="w-full h-full object-cover select-none"
-							draggable={false}
-						/>
+						<picture className="block w-full h-full">
+							<source
+								media="(max-width: 767px)"
+								srcSet={banner.mobile}
+							/>
+							<img
+								src={banner.desktop}
+								alt={`Banner ${i + 1}`}
+								className="w-full h-full object-cover select-none"
+								draggable={false}
+							/>
+						</picture>
 					</div>
 				))}
 			</div>
